@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 15:19:05 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/13 16:21:24 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/13 16:21:57 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/13 16:32:36 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,20 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_display(int a, int b)
+void	ft_putnbr(int nb)
 {
-	ft_putchar('0' + a / 10);
-	ft_putchar('0' + a % 10);
-	ft_putchar(' ');
-	ft_putchar('0' + b / 10);
-	ft_putchar('0' + b % 10);
-	if (!(a == 98 && b == 99))
-	{
-		ft_putchar(',');
-		ft_putchar(' ');
-	}
-}
+	unsigned int	n;
 
-void	ft_print_comb2(void)
-{
-	int	a;
-	int	b;
-
-	a = 0;
-	b = 0;
-	while (a < 99)
+	if (nb < 0)
 	{
-		b = a + 1;
-		while (b < 100)
-		{
-			ft_display(a, b);
-			b++;
-		}
-		a++;
+		ft_putchar('-');
+		nb *= -1;
 	}
+	n = nb;
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		n %= 10;
+	}
+	ft_putchar(n + 48);
 }
