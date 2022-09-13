@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:33:45 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/13 19:06:13 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/13 19:21:11 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i++]);
 }
 
-void ft_display(int n, int *tab, int x)
+void	ft_display(int n, int *tab, int x)
 {
 	int	i;
 
@@ -59,7 +59,7 @@ void	ft_incr(int n, int *tab)
 
 void	ft_print_combn(int n)
 {
-	int	tab[n];
+	int	tab[9];
 	int	i;
 
 	i = 0;
@@ -69,7 +69,7 @@ void	ft_print_combn(int n)
 		i++;
 	}
 	ft_display(n, tab, 0);
-	while (tab[0] != 10 - n || tab[n-1] != 9)
+	while (tab[0] != 10 - n || tab[n - 1] != 9)
 	{
 		if (tab[n - 1] != 9)
 			tab[n - 1] += 1;
@@ -77,10 +77,4 @@ void	ft_print_combn(int n)
 			ft_incr(n, tab);
 		ft_display(n, tab, 1);
 	}
-}
-
-int	main(void)
-{
-	ft_print_combn(4);
-	return (0);
 }
