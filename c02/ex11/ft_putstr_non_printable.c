@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:33:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/14 16:17:23 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/14 18:17:57 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,4 @@ void	ft_putstr_non_printable(char *str)
 		else
 			write(1, &str[i], 1);
 	}
-}
-
-int	main(void)
-{
-	ft_putstr_non_printable("Coucou\ntu vas bien ?");
-//	ft_puthex(42, "0123456789abcdef");
-	return (0);
 }
