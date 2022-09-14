@@ -6,11 +6,20 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 19:03:13 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/14 19:03:38 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/14 20:07:38 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
 	unsigned int	i;
+	unsigned int	x;
+
+	i = 0;
+	x = 0;
+	if (!(to_find[i]))
+		return (str);
+	while (str[i] !)
+	{
+	}
 }
