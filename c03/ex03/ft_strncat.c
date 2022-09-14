@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_in_tab.c                                    :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 20:14:53 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/13 20:32:26 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/14 19:01:37 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/14 19:02:31 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	swap;
-	int	len;
+	unsigned int	i;
+	unsigned int	x;
 
 	i = 0;
-	len = size - 1;
-	while (i < (size / 2))
-	{
-		swap = tab[i];
-		tab[i] = tab[len];
-		tab[len] = swap;
+	x = -1;
+	while (dest[i])
 		i++;
-		len--;
-	}
+	while (src[++x] && x < nb)
+		dest[i++] = src[x];
+	dest[i] = '\0';
+	return (dest);
 }
