@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:14:29 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 18:40:00 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 19:31:19 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ char	**ft_strtotab(char *str, int i);
 
 int		ft_error(void);
 int		ft_strlen(char *str);
+void	ft_putchar(char c);
+void	ft_printtab(char **tab);
 
 #endif
