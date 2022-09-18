@@ -6,12 +6,11 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 12:49:20 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 15:21:23 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 16:19:34 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "utils.h"
 
 char	g_size;
 
@@ -41,10 +40,6 @@ char	*ft_strmal(int i)
 	return (str);
 }
 
-/*
-** Alloue de la memoire au tableau (string par string egalement avec ft_strmal ci-dessus)
-*/
-
 char	*ft_tabmal(int x, int y)
 {
 	char	**tab;
@@ -63,10 +58,6 @@ char	*ft_tabmal(int x, int y)
 	return (tab);
 }
 
-/*
-** Remplis le tableau vide (deja malloc) de 0 (ou de 1 jsp encore)
-*/
-
 void	ft_tabfill(char **tab)
 {
 	int	x;
@@ -80,12 +71,6 @@ void	ft_tabfill(char **tab)
 			tab[x][y] = '1';
 	}
 }
-
-/*
-** ft_strtotab transforme l'input string d'argument en un tableau qui les stocke
-** 
-** nb pour David : envoyer int i a 0 d'office
-*/
 
 char	**ft_strtotab(char *str, int i;)
 {
@@ -111,25 +96,4 @@ char	**ft_strtotab(char *str, int i;)
 	}
 	hint[x] = NULL;
 	return (hint);
-}
-
-int	ft_checkdup(char **tab)
-{
-	int	x;
-	int	y;
-	int	i;
-
-	x = -1;
-	while (++x < g_size)
-	{
-		y = -1;
-		while (++y < g_size)
-		{
-			i =y;
-			while (++i < g_size)
-			{
-				if (
-			}
-		}
-	}
 }

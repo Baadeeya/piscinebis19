@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkhints.c                                    :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 13:19:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 16:12:02 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/18 16:14:29 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/18 16:16:18 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#ifndef UTILS_H
+# define UTILS_H
 
-int	ft_check(int ac, char **av)
-{
-	int	i;
+# include <stdlib.h>
+# include <unistd.h>
 
-	i = 0;
-	if (ac != 2)
-		return (ft_error());
-	if (ft_strlen(av[1] != (g_size * 8) - 1))
-		return (ft_error());
-}
+char	g_size = 4;
 
-int	ft_checkformat(char *str)
-{
-	int	i;
-
-	i = -1;
-	while (str[++i])
-	{
-		if (!(str[i] >= '1' && str[i] <= g_size && str[i + 1] == ' '))
-			return (ft_error());
-		i++;
-	}
-	return (1);
-}
+#endif

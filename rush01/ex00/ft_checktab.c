@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkhints.c                                    :+:      :+:    :+:   */
+/*   ft_checktab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 13:19:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 16:12:02 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/18 15:55:00 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/18 16:35:24 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#include "utils.h"
 
-int	ft_check(int ac, char **av)
+int	ft_checkdup(char **tab)
 {
+	int	x;
+	int	y;
 	int	i;
 
-	i = 0;
-	if (ac != 2)
-		return (ft_error());
-	if (ft_strlen(av[1] != (g_size * 8) - 1))
-		return (ft_error());
+	x = -1;
+	while (++x < g_size)
+	{
+		y = -1;
+		while (++y < g_size)
+		{
+			i = y;
+			while (++i < g_size)
+			{
+				if (tab[x][y] == tab[x][i] && tab[x][y])
+					return (0);
+				if (tab[y][x] == tab[i][x] && tab[y][x])
+					return (0);
+			}
+		}
+	}
+	return (0);
 }
 
-int	ft_checkformat(char *str)
+int	ft_checkhint(char **hint, char **tab)
 {
-	int	i;
 
-	i = -1;
-	while (str[++i])
-	{
-		if (!(str[i] >= '1' && str[i] <= g_size && str[i + 1] == ' '))
-			return (ft_error());
-		i++;
-	}
-	return (1);
 }
