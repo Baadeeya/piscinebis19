@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:32:54 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 19:39:16 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 20:44:05 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	main(int ac, char **av)
 {
-	if (!(ft_check(ac, av)) || !(ft_checkformat(av[1]))
+	if (!(ft_check(ac, av)) || !(ft_checkformat(av[1])))
 		return (0);
 }
