@@ -6,11 +6,13 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:23:50 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 18:38:48 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 18:58:31 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
+
+// Diminutif de String Malloc. Alloue de l'espace memoire a une chaine de caracteres.
 
 char	*ft_strmal(int i)
 {
@@ -21,6 +23,9 @@ char	*ft_strmal(int i)
 		return (NULL);
 	return (str);
 }
+
+// Diminutif de Tableau Malloc. Alloue de l'espace a un tableau de string. Fait appel a
+// ft_strmal (fonction du dessus) pour allouer string par string.
 
 char	*ft_tabmal(int x, int y)
 {
@@ -40,6 +45,8 @@ char	*ft_tabmal(int x, int y)
 	return (tab);
 }
 
+// Parcours le tableau vide pour mettre 0 a tous les indices pour s'assurer de so contenu
+
 void	ft_tabfill(char **tab)
 {
 	int	x;
@@ -53,6 +60,9 @@ void	ft_tabfill(char **tab)
 			tab[x][y] = 0;
 	}
 }
+
+// Prend la string des hints en argument pour les stocker en tableau, plus simple a utiliser.
+// Il faut evidemment aussi Malloc ce tableau avant de l'utiliser
 
 char	**ft_strtotab(char *str, int i)
 {

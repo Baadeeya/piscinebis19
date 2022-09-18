@@ -6,11 +6,14 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 13:19:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 18:30:07 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 18:49:03 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
+
+// Verifie si les nombre d'arguments est correcte
+// Verifie aussi la taille de la string avec les hints
 
 int	ft_check(int ac, char **av)
 {
@@ -22,6 +25,9 @@ int	ft_check(int ac, char **av)
 	if (ft_strlen(av[1]) != (g_size * 8) - 1)
 		return (ft_error());
 }
+
+// Verifie qu'il y ait bien un espace entre chaque hint et qu'il en ait bien 16
+// (ou + en fonction de la taille du tableau)
 
 int	ft_checkformat(char *str)
 {
