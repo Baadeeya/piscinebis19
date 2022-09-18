@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:23:50 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 18:24:04 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 18:37:16 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_tabmal(int x, int y)
 	i = -1;
 	while (++i < x)
 	{
-		tab[i] = ft_singlemal(y);
+		tab[i] = ft_strmal(y);
 		if (!(tab[i]))
 			return (NULL);
 	}
