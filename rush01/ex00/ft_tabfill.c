@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:23:50 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/18 18:37:16 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/18 18:38:48 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_tabfill(char **tab)
 	}
 }
 
-char	**ft_strtotab(char *str, int i;)
+char	**ft_strtotab(char *str, int i)
 {
 	int		x;
 	int		y;
