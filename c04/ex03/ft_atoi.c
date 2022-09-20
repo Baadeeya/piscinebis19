@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 16:21:57 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 16:34:06 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/20 16:35:13 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/20 16:39:03 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_atoi(char *str)
 {
-	write(1, &c, 1);
-}
+	int	result;
+	int	minus;
+	int	i;
 
-void	ft_putnbr(int nb)
-{
-	unsigned int	n;
-
-	if (nb < 0)
+	result = 0;
+	minus = 1;
+	i = 0;
+	while ((str[i] == ' ') || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	while ((str[i] == '-') || (str[i] == '+'))
 	{
-		ft_putchar('-');
-		nb *= -1;
+		if (str[i] == '-')
+			minus *= -1;
+		i++;
 	}
-	n = nb;
-	if (n > 9)
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		ft_putnbr(n / 10);
-		n %= 10;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
-	ft_putchar(n + 48);
+	return (minus * result);
 }
