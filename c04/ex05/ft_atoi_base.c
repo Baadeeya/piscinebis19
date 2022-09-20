@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 16:43:43 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 16:52:59 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/20 19:42:42 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/20 19:49:02 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ int	ft_strlen_atoi(char *str)
 	while (str[++i])
 	{
 		if (str[i] == '+' || str[i] == '-'
-				|| str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)
-				|| ft_base(str[i], str + i + 1) >= 0)
+			|| str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)
+			|| ft_base(str[i], str + i + 1) >= 0)
 			return (0);
 	}
 	return (i);
 }
+
 int	ft_atoi_base(char *str, char *base)
 {
 	int	i;
@@ -53,7 +54,7 @@ int	ft_atoi_base(char *str, char *base)
 			n = 1 - n;
 	nbr = 0;
 	i = ft_base(*str, base);
-	while (i >= 0)
+	while (i > -1)
 	{
 		nbr = nbr * len + i;
 		str++;
@@ -62,13 +63,4 @@ int	ft_atoi_base(char *str, char *base)
 	if (n)
 		nbr *= -1;
 	return (nbr);
-}
-
-#include <stdio.h>
-#include <limits.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_atoi_base("1", "0123456789abcdef"));
-	return (0);	
 }
