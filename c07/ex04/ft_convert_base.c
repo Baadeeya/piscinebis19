@@ -6,22 +6,13 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:10:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 15:59:30 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 18:05:40 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_base(char c, char *base)
-{
-	int	i;
-
-	i = -1;
-	while (base[++i])
-		if (c == base[i])
-			return (i);
-	return (-1);
-}
+int	ft_base(char c, char *base);
 
 int	ft_strlen_base(char *base)
 {
@@ -74,30 +65,15 @@ int	ft_nbrlen(unsigned int nb, unsigned int baselen)
 	return (1 + ft_nbrlen(nb / baselen, baselen));
 }
 
-char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
+char	*ft_destfill(char *base_to, unsigned int nb, int n, char *dest)
 {
-	char			*dest;
-	unsigned int	nb;
-	int				size;
-	int				i;
-	int				n;
+	int	i;
+	int	size;
 
-	if (!base_from || !base_to || !nbr)
-		return (NULL);
-	n = ft_strlen_base(base_from);
 	size = ft_strlen_base(base_to);
-	if (!(n && size))
-		return (NULL);
-	n = ft_atoi_base(nbr, base_from, n);
-	nb = n;
-	if (n < 0)
-		nb = -n ;
 	i = ft_nbrlen(nb, size);
 	if (n < 0)
 		i++;
-	dest = malloc((i + 1) * sizeof(char));
-	if (!dest)
-		return (NULL);
 	dest[i] = '\0';
 	while (i--)
 	{
@@ -109,10 +85,37 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	return (dest);
 }
 
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
+{
+	char			*dest;
+	unsigned int	nb;
+	int				size;
+	int				i;
+	int				n;
+
+	if (!nbr || !base_from || !base_to)
+		return (NULL);
+	n = ft_strlen_base(base_from);
+	size = ft_strlen_base(base_to);
+	if (!(n && size))
+		return (NULL);
+	n = ft_atoi_base(nbr, base_from, n);
+	nb = n;
+	if (n < 0)
+		nb *= -1;
+	i = ft_nbrlen(nb, size);
+	if (n < 0)
+		i++;
+	dest = malloc((i + 1) * sizeof(char));
+	if (!dest)
+		return (NULL);
+	return (ft_destfill(base_to, nb, n, dest));
+}
+
 #include <stdio.h>
 
 int	main(void)
 {
-	printf("[%s]\n", ft_convert_base("", "0123456789", "0123456789abcdef"));
+	printf("[%s]\n", ft_convert_base("42", "0123456789", "0123456789abcdef"));
 	return (0);
 }
