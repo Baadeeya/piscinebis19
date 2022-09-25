@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:33:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 14:23:52 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 17:13:50 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ void	ft_putstr_non_printable(char *str)
 	{
 		if (str[i] < 32)
 		{
-			write(1, "\\0", 2);
+			write(1, "\\", 1);
+			if (str[i] < 16)
+				write(1, "0", 1);
 			ft_puthex(str[i], "0123456789abcdef");
 		}
 		else

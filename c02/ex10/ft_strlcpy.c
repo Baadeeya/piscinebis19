@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:11:59 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 10:28:43 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 16:37:59 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		return (x);
 	i = -1;
 	while (src[++i] && i < size - 1)
-		dst[i] = src[i];
-	dst[i] = '\0';
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (x);
 }
