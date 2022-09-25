@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:40:19 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 19:45:50 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 12:21:50 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	ft_putnbr_base(int nbr, char *base)
 	int	i;
 
 	i = 0;
+	if (!base)
+		return ;
 	while (base[i])
 	{
 		if (base[i] == '+' || base[i] == '-'

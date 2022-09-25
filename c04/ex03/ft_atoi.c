@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:35:13 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 16:39:03 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 12:25:23 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_atoi(char *str)
 	int	minus;
 	int	i;
 
+	if (!str)
+		return (0);
 	result = 0;
 	minus = 1;
 	i = 0;
