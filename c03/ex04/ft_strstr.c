@@ -6,11 +6,9 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 19:03:13 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 14:37:23 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 17:15:38 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -33,5 +31,5 @@ char	*ft_strstr(char *str, char *to_find)
 			return (str + i);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
