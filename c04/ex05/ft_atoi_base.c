@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:42:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 19:49:02 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 13:24:10 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,17 @@ int	ft_atoi_base(char *str, char *base)
 	int	len;
 	int	n;
 
+	if (!str || !base)
+		return (0);
 	len = ft_strlen_atoi(base);
 	if (len < 2)
 		return (0);
 	while ((*str >= 9 && *str <= 13) || *str == ' ')
 		str++;
-	n = 0;
+	n = 1;
 	while (*str == '-' || *str == '+')
 		if (*str++ == '-')
-			n = 1 - n;
+			n *= -1;
 	nbr = 0;
 	i = ft_base(*str, base);
 	while (i > -1)
@@ -60,7 +62,5 @@ int	ft_atoi_base(char *str, char *base)
 		str++;
 		i = ft_base(*str, base);
 	}
-	if (n)
-		nbr *= -1;
-	return (nbr);
+	return (nbr * n);
 }

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:59:16 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 16:29:09 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 13:28:21 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr(char *str)
 {
 	int	i;
 
+	if (!str)
+		return ;
 	i = -1;
 	while (str[++i])
 		write(1, &str[i], 1);
