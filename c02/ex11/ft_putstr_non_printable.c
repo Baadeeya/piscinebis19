@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:33:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 10:48:43 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:23:52 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	ft_putstr_non_printable(char *str)
 {
 	unsigned int	i;
 
+	if (!str)
+		return ;
 	i = -1;
 	while (str[++i])
 	{

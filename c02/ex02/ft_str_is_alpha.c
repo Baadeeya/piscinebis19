@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:07:08 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 10:35:16 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:10:53 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 	int	len;
 
+	if (!str || !*str)
+		return (0);
 	i = -1;
 	len = 0;
 	while (str[len])

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:59:37 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/14 13:00:49 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:04:02 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
+	if (!dest || !src)
+		return (0);
 	i = -1;
 	while (src[++i])
 		dest[i] = src[i];

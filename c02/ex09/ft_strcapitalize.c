@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:33:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 10:45:08 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:20:15 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	if (str[i] > 96 && str[i] < 123)
 		str[i] -= 32;
