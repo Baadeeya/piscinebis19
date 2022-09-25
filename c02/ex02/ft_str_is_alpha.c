@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:07:08 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/14 13:16:02 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/25 10:35:16 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_str_is_alpha(char *str)
 		len++;
 	while (str[++i])
 	{
-		if (str[i] < 65 || str[i] > 90 && str[i] < 97 || str[i] > 122)
+		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
 			break ;
 	}
 	if (i == len)
