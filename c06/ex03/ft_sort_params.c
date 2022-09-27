@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:09:08 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 20:09:48 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 19:34:41 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int	main(int ac, char **av)
 	int		x;
 	char	*tmp;
 
+	if (av)
+		return (0);
 	i = 1;
 	x = 1;
 	while (i < ac)

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:10:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 18:05:40 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 20:11:27 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,12 +110,4 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	if (!dest)
 		return (NULL);
 	return (ft_destfill(base_to, nb, n, dest));
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("[%s]\n", ft_convert_base("42", "0123456789", "0123456789abcdef"));
-	return (0);
 }

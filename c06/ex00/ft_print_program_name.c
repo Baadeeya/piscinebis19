@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:02:29 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 20:04:03 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 19:33:13 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_putstr(char *str)
 
 int	main(int ac, char **av)
 {
+	if (!av)
+		return (0);
 	if (ac)
 	{
 		ft_putstr(av[0]);
