@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:33:51 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 14:20:15 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 12:39:49 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (!ft_alphanum(str[i - 1]) && str[i] > 96 && str[i] < 123)
 			str[i] -= 32;
-		else if (ft_alphanum(str[i - 1]) && str[i] > 64 && str[i] < 96)
+		else if (ft_alphanum(str[i - 1]) && str[i] > 64 && str[i] < 91)
 			str[i] += 32;
 	}
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:33:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/25 17:13:50 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 12:44:46 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	ft_putstr_non_printable(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (str[i] < 32)
+		if (str[i] < 32 || str[i] == 127)
 		{
 			write(1, "\\", 1);
-			if (str[i] < 16)
+			if (str[i] < 16 || str[i])
 				write(1, "0", 1);
 			ft_puthex(str[i], "0123456789abcdef");
 		}
