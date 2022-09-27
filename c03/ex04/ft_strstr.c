@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 19:03:13 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/27 12:53:34 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:12:17 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@ char	*ft_strstr(char *str, char *to_find)
 	unsigned int	i;
 	unsigned int	x;
 
+	if (!to_find)
+		return (str);
+	if (!str)
+		return (0);
 	i = 0;
 	if (!*to_find)
 		return (str);

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 19:54:06 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/20 20:00:25 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:40:40 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,7 @@ int	ft_iterative_factorial(int nb)
 	i = 1;
 	if (nb < 0)
 		return (0);
-	if (nb == 1)
-		return (1);
 	while (nb > 1)
-	{
-		i *= nb;
-		nb--;
-	}
+		i *= nb--;
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:36:37 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/27 12:53:30 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:12:38 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	i;
 	unsigned int	len;
 
+	if (!dest || !src)
+		return (0);
 	i = -1;
 	len = ft_strlen(dest);
 	if (size <= len)

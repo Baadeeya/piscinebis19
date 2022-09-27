@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:37:36 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/27 12:53:51 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:10:58 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while ((s1[i] == s2[i]) && s1[i] && i < n)
 		i++;
