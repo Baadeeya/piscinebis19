@@ -6,15 +6,15 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 12:55:25 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/21 13:01:04 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/28 13:57:20 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i])
@@ -24,8 +24,9 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(char *src)
 {
-	int		i;
-	char	*dest;
+	unsigned int	i;
+	unsigned int	len;
+	char			*dest;
 
 	i = -1;
 	len = ft_strlen(src) + 1;

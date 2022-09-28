@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 16:42:29 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/27 20:10:35 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/28 14:19:41 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,19 +88,3 @@ char	**ft_split(char *str, char *charset)
 	arr[len] = 0;
 	return (arr);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**split;
-	char	str[50] = "Salut0les copains";
-	char	charset[10] = "0 ";
-	int		i = -1;
-
-	split = ft_split(str, charset);
-	while (++i < ft_wordcount(str, charset) + 1)
-		printf("[%s]\n", split[i]);
-	free(split);
-	return (0);
-}*/
