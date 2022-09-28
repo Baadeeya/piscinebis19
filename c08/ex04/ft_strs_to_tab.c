@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 20:23:26 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/27 20:25:58 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/09/28 11:57:25 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	int			i;
 	t_stock_str	*tab;
 
+	if (!av)
+		return (0);
 	i = -1;
 	if (ac < 0)
 		ac = 0;
