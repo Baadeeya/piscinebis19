@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 20:23:26 by dagutin           #+#    #+#             */
-/*   Updated: 2022/09/28 15:54:09 by dagutin          ###   ########.fr       */
+/*   Created: 2022/09/28 18:01:03 by dagutin           #+#    #+#             */
+/*   Updated: 2022/09/28 18:03:15 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
+char	*ft_free(char *str)
+{
+	free(str);
+	return (NULL);
+}
+
 char	*ft_strdup(char *str)
 {
 	int		i;
@@ -31,7 +37,7 @@ char	*ft_strdup(char *str)
 	i = ft_strlen(str);
 	dest = (char *)malloc(sizeof(char) * (i + 1));
 	if (!dest)
-		return (NULL);
+		return (ft_free(dest));
 	i = -1;
 	while (str[++i])
 		dest[i] = str[i];
@@ -57,6 +63,8 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		tab[i].size = ft_strlen(av[i]);
 		tab[i].str = av[i];
 		tab[i].copy = ft_strdup(av[i]);
+		if (!tab[i].copy)
+			return ((struct s_stock_str *)(ft_free(tab[i].copy)));
 	}
 	tab[i].str = 0;
 	return (tab);
